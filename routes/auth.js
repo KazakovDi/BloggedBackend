@@ -78,7 +78,7 @@ router.get("/me", checkAuth, async (req,res)=> {
 })
 router.post("/changeAvatar",checkAuth, async (req,res)=> {
         const user = await User.findById(req.userId)
-        user.avatarUrl = `https://reactblogv2.herokuapp.com` + req.body.avatarUrl
+        user.avatarUrl = `https://blogged.onrender.com` + req.body.avatarUrl
         await user.save()
         res.json("success")
 
